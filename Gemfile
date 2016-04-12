@@ -10,6 +10,7 @@ gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'jquery-rails'
 gem 'turbolinks'
 
+gem 'unicorn'
 gem 'esperanza', github: 'your/esperanza', branch: 'master'
 
 group :development, :test do
