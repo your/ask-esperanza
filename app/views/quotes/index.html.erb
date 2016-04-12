@@ -1,0 +1,13 @@
+<h3>Generated so far:</h3>
+<br>
+<% @quotes.each do |q| %>
+  <h5>
+    <% if q.value.nil? %>
+      <i>(..generating?)</i>
+    <% else %>
+      <%= q.value %>
+    <% end %>
+  </h5>
+  (<%= q.tot_votes %> votes.)
+  <br><br>
+<% end %>
