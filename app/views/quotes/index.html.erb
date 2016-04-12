@@ -8,6 +8,6 @@
       <%= q.value %>
     <% end %>
   </h5>
-  (<%= q.tot_votes %> votes.)
+  (<%= q.tot_votes %> votes. <%= link_to '+', vote_up_quote_path(q.id) %> / <%= link_to '-', vote_down_quote_path(q.id) %>)
   <br><br>
 <% end %>

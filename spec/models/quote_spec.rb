@@ -17,7 +17,7 @@ RSpec.describe Quote, type: :model do
   end
 
   describe "#vote_down!" do
-    it { expect{ quote.vote_down! }.to change{ quote.vote_downs }.from(0).to(-1) }
+    it { expect{ quote.vote_down! }.to change{ quote.vote_downs }.from(0).to(1) }
   end
 
   describe "#tot_votes" do

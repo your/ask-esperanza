@@ -24,6 +24,7 @@ class QuotesController < ApplicationController
       @quote.send("vote_#{direction}!".to_sym)
 
       if @quote.save
+        flash[:notice] = "Vote saved!"
         redirect_to quotes_path
       else
         flash[:error] = "Something went terribly wrong."

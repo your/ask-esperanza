@@ -11,7 +11,7 @@ class Quote < ActiveRecord::Base
   end
 
   def vote_down!
-  	self.vote_downs -= 1
+  	self.vote_downs += 1
   end
 
   def tot_votes
