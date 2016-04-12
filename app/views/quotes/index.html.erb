@@ -5,7 +5,7 @@
     <% if q.value.nil? %>
       <i>(..generating?)</i>
     <% else %>
-      <%= q.value %>
+      <%= link_to q.value, quote_path(q) %>
     <% end %>
   </h5>
   (<%= q.tot_votes %> votes. <%= link_to '+', vote_up_quote_path(q.id) %> / <%= link_to '-', vote_down_quote_path(q.id) %>)

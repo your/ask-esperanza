@@ -1,0 +1,5 @@
+<h3>Quote #<%= @quote.id %>:</h3>
+<br>
+<h4><%= @quote.value %></h4>
+(<%= @quote.tot_votes %> votes. <%= link_to '+', vote_up_quote_path(@quote.id) %> / <%= link_to '-', vote_down_quote_path(@quote.id) %>)
+<br><br>

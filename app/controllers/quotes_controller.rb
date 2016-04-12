@@ -3,6 +3,10 @@ class QuotesController < ApplicationController
     @quotes = Quote.all.reorder('created_at DESC')
   end
 
+  def show
+    @quote = Quote.find(params[:id])
+  end
+
   def new
     @quote = Quote.new
   end

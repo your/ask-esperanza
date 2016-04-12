@@ -13,6 +13,14 @@ RSpec.describe QuotesController, type: :controller do
     end
   end
 
+  describe "#show" do
+    it do
+      get :show
+      expect(response).to be_success
+      expect(response).to render_template :show
+    end
+  end
+
   describe "#new" do
     it do
       get :new
